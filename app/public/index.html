@@ -8,15 +8,37 @@
     <!-- Reset CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-        crossorigin="anonymous">
     <title>Friend Finder</title>
 </head>
 
 <body>
-
+    <div class="container">
+        <div class="jumbotron">
+            <h1>
+                <i class="fas fa-user-friends" aria-hidden="true"></i>
+                 Friend Finder
+            </h1>
+            <hr>
+            <h2>Answer a few basic questions. </h2>
+            <h2>Then find the friend with the greatest compatability!</h2>
+            <br>
+            <div>
+                <a href="/survey"><button type="button" class="btn btn-lg btn-primary">
+                        <h4><span class="fas fa-poll"></span>
+                             Go to Survey</h4>
+                    </button></a>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <p><a href="/api/friends">API Friends List</a>
+                    | <a href="https://github.com/jhernandeztorres/BC-FriendFinder">Github Repo</a></p>
+            </div>
+        </footer>
+    </div>
 </body>
 <!-- Bootstrap JS Files -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
