@@ -14,6 +14,7 @@ module.exports = function(app){
         let friendName = '';
         let friendImg = '';
         let totalDiff = 50;
+        let initialScore = '';
 
         // Looping through friends array
         for(let i = 0; i < friendData.length - 1; i++){
@@ -23,18 +24,21 @@ module.exports = function(app){
                 diff += Math.abs(friendData[i].scores[j] - userScore[j]);
             }
 
-            if(diff <= totalDiff){
+            if(diff < totalDiff && diff > initialScore){
+                initialScore = diff;
+                friendName = friendData[i].name;
+                friendImg = friendData[i].photo;
                 console.log(`Closest match found = ${diff}
 Friend name = ${friendData[i].name}
 Friend image = ${friendData[i].photo}`);
             }
         }
 
-        // friendData.push();
+        // friendData.push(newFriend);
 
 
 
-        // friendData.push(req.body);
-        res.json({status: 'OK', friendName: friendName, friendImg: friendImg});
+        friendData.push(req.body);
+        res.json({status: 'OK', name: friendName, photo: friendImg});
     });
 };

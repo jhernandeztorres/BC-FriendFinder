@@ -214,6 +214,7 @@
                     data: newFriend,
                     url: "/api/friends",
                     success: function(res){
+                        console.log("RES",res)
                         $("#friendName").text(res.name);
                         $("#friendImg").attr("src", res.photo);
                         $("#friendModal").modal("show");
