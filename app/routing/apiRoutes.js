@@ -23,21 +23,15 @@ module.exports = function(app){
             for(let j = 0; j < userScore.length; j++){
                 diff += Math.abs(friendData[i].scores[j] - userScore[j]);
             }
-
             if(diff < totalDiff && diff > initialScore){
                 initialScore = diff;
                 friendName = friendData[i].name;
                 friendImg = friendData[i].photo;
-                console.log(`Closest match found = ${diff}
+console.log(`Closest match found = ${diff}
 Friend name = ${friendData[i].name}
 Friend image = ${friendData[i].photo}`);
             }
         }
-
-        // friendData.push(newFriend);
-
-
-
         friendData.push(req.body);
         res.json({status: 'OK', name: friendName, photo: friendImg});
     });
